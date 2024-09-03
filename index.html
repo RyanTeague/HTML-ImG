@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* This style sets the width of all images to 100%: */
+        img {
+          width: 100%;
+        }
+    </style>
 </head>
 <body>
     <!--HTML Images
@@ -18,7 +24,9 @@
     <img src="pic_trulli.jpg" alt="Trulli" width="500" height="333">
 
     <h2>HTML Image</h2>
-    <img src="img_chania.jpg" alt="Flowers in Chania" width="460" height="345">    
+    <img src="img_chania.jpg" alt="Flowers in Chania" width="460" height="345">  
+    
+    <hr>
 
     <!--HTML Image Syntax
     
@@ -41,8 +49,224 @@
 
     <!--The src Attribute
     
-        
+       Note: When a web page loads, it is the browser, at that moment, that gets
+       the image from a web server and inserts it into the page. Therefore, make
+       sure that the image actually stays in the same spot in relation to the web
+       page, otherwise you visitors will get a broken link icon. The broken link icon
+       and the alt text are shown if the browser connot find the image.
     -->
+
+    <h2>Alternative text</h2>
+
+<p>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</p>
+
+<img src="img_chania.jpg" alt="Flowers in Chania" width="460" height="345">
+
+<hr>
+
+<!--The alt Attribute
+
+    The required alt attribute provides an alternate text for an image, if the
+    user for some reason cannot view it (because of slow connection, an error in 
+    the src attribute, or if the user uses a screen reader).
+
+    The value of the alt attribute should describe the image:
+-->
+
+<h2>Alternative text</h2>
+
+<p>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</p>
+
+<img src="img_chania.jpg" alt="Flowers in Chania" width="460" height="345">
+
+<hr>
+
+<!--if a browser connot find an immage, it will display the value of the alt
+attribute:
+-->
+
+<p>If a browser cannot find the image, it will display the alternate text:</p>
+
+<img src="wrongname.gif" alt="Flowers in Chania">
+
+
+<hr>
+
+<!--Tip: A screen reader is a software program that reads the HTML code, and
+allows the user to "listen" to the content. Screen readers are useful for
+people who are visually impaired or learing disabled.
+-->
+
+<!--Image Size - Width and Height
+
+    You can use the style attribute to specify the width and height of an 
+    image.
+-->
+
+<h2>Image Size</h2>
+
+<p>Here we use the style attribute to specify the width and height of an image:</p>
+
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+
+<hr>
+
+<!--Alternatively, you can use the width and height attribute:-->
+
+<h2>Image Size</h2>
+
+<p>Here we specify the width and height of an image with the width and height attributes:</p>
+
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+
+<hr>
+
+<!--The width and height attribute always defines the width and height of 
+the image in pixels.
+
+Note: AlWays specify the width and height of an image. If width and height
+are not specfied, the web page might flicker while the image loads.
+-->
+
+<!--Width and Height, or Style?
+
+    The width, height, and style attribute are all valid in HTML.
+
+    However, it is suggested to use the style attribute. It prevents style sheets
+    from changing the size of images:
+-->
+
+<h2>Width/Height Attributes or Style?</h2>
+
+<p>The first image uses the width attribute (set to 128 pixels), but the style in the head section overrides it, and sets the width to 100%.</p>
+
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+<p>The second image uses the style attribute to set the width to 128 pixels, this will not be overridden by the style in the head section:</p>
+
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<hr>
+
+<!--Images in Another Folder
+
+    If you  have your images in a sub-folder, you must inclued the folder name in
+    the src attribute:
+
+        <h2>Images in Another Folder</h2>
+        <p>It is common to store images in a sub-folder. You must then include the folder name in the src attribute:</p>
+
+        <img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+-->
+
+<!--Images on Another Server/Website
+
+Some web sites point to an image on another server.
+
+To point to an image on another server, you must specify an absolute (full)
+URL in the src attribute:  
+
+<h2>Images on Another Server</h2>
+
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">
+-->
+
+<!--Note on external images: External images might be under copyright. If
+you do not get permission to use it, you may be in violation of copyright
+laws. In addition, you cannot control external images; they can suddenly be
+removed or changed.
+-->
+
+<!--Animated Images
+
+    HTML allows animated Gifs:
+-->
+
+<h2>Animated Images</h2>
+
+<p>HTML allows moving images:</p>
+
+<img src="programming.gif" alt="Computer man" style="width:48px;height:48px;">
+
+<hr>
+
+<!--Images as a Link
+
+    To use an image as a link, put the <img> tag inside the <a> tag:
+-->
+
+<h2>Image as a Link</h2>
+
+<p>The image is a link. You can click on it.</p>
+
+<a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<hr>
+
+<!--Image Floating
+
+    Use the CSS float property to let the image float to the right or the left
+    of a text:
+-->
+
+<h2>Floating Images</h2>
+<p><strong>Float the image to the right:</strong></p>
+
+<p>
+<img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+</p>
+
+<p><strong>Float the image to the left:</strong></p>
+<p>
+<img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+</p>
+
+<hr>
+
+<!--Common Image Formates
+
+    Here are the most common image file types, which are supported in all
+    browsers (Chrome, Edge, Firefox, Safari, Opera):
+
+    Abbreviation    File Format                 File Extension
+
+    APNG        Animated Portable Network       .apng
+                Graphics
+
+    GIF         Graphics Interchange Format     .git    
+    
+    ICO         Microsoft Icon                  .ico, .cur
+
+    JPEG        Joint Photographic Expert
+                Group image                     .jpg, .jpeg, .jfif, .pjpef,
+                                                .pjp
+   
+    PNG         Protable Network Graphics       .png
+
+    SVG         Scalable Vector Graphics        .svg
+                                                
+-->
+
+<!--Chapter summary
+
+    .Use the HTML <img> element to define an image
+    .Use the HTML src attribute to define the URL of the image
+    .Use the HTML alt attribute to define an alternate text for an image, if
+    if cannot be displayed
+    .Use the HTML width and height attributes or the CSS width and 
+    height properties to define the size of the image
+    .Use the CSS float property to let the image float the the left or to the
+    right
+
+    Note: Loading large images takes time, adn can slow down you web page.
+    Use images carefully.
+-->
+
 
 </body>
 </html>
